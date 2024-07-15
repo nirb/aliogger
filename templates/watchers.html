@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row row-cols-3">
+        <div class="col">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#new-watcher-modal">
+                <span class="material-icons md-36 icon_btn">
+                    add
+                </span>
+            </button>
+        </div>
+        <div class="col">
+            <h2>Watchers</h2>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
+
+{% with items=items %}
+{% include 'watchers_table.html' %}
+{% endwith %}
+
+{% include 'forms/new_watcher.html' %}
+
+{% endblock %}
